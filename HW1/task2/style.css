@@ -1,4 +1,4 @@
-#button {
+.button {
     background-color: #ff6600;
     font-size: 14px;
     border-radius: 25px;
@@ -8,7 +8,7 @@
     margin: 4px 2px;
     cursor: pointer;
 }
-#button:hover {
+.button:hover {
     background-color: rgb(255, 163, 102);
     color: white;
 }
