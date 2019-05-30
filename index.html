@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HW2</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script src="js.js" defer></script>
+</head>
+<body>
+  <form name="plant" action="#" method="get">
+    <h1>Новое растение:</h1>
+      <p class="entity">Вид сущности:
+          <input id="fern" type="radio" name="plant" value="Папоротник" onclick="checkedFern(this.form)">
+          <label for="fern">Папоротник</label>
+          <input id="firTree" type="radio" name="plant" value="Ель" onclick="checkedFirTree(this.form)">
+          <label for="firTree">Ель обыкновенная</label>
+      </p>
+    <p><label for="view">Вид растения:</label>
+        <select id="view" name="view">
+            <option value="Папоротник">Папоротник</option>
+            <option value="Ель обыкновенная">Ель обыкновенная</option>
+        </select></p>
+    <p><label for="namePlant">Название растения:</label>
+        <input type="text" id="namePlant" name="namePlant" maxlength="50" placeholder="Название" pattern="^[А-Яа-яЁё\s]+$" required></p>
+    <p><label for="classPlant">Класс растения:</label>
+        <select id="classPlant" name="classPlant">
+            <option value="Папоротниковые">Папоротниковые</option>
+            <option value="Хвойные">Хвойные</option>
+        </select></p>
+    <p><label for="age">Возраст растения:</label>
+        <input type="number" id="age" min="1" max="250"></p>
+    <p><label for="placeOfGrowth">Место произрастания:</label>
+        <input type="text" id="placeOfGrowth" name="placeOfGrowth" maxlength="80" placeholder="Место произрастания" pattern="^[А-Яа-яЁё\s]+$" required></p>
+    <p><label for="application">Область применения:</label>
+        <select id="application" name="application">
+            <option value="Пищевая промышленность">Пищевая промышленность</option>
+            <option value="Озеленение">Озеленение</option>
+            <option value="Лекарственные средства">Лекарственные средства</option>
+            <option value="Садоводство">Садоводство</option>
+        </select></p>
+    <p><label for="formLeaf">Форма листьев:</label>
+        <input type="text" id="formLeaf" name="formLeaf" maxlength="30" placeholder="Форма листьев" pattern="^[А-Яа-яЁё\s]+$" disabled>
+    </p>
+    <p><label for="sizeCones">Размер шишек:</label>
+        <input type="text" id="sizeCones" name="sizeCones" maxlength="30" placeholder="Размер шишек" pattern="^[А-Яа-яЁё\s]+$" disabled>
+    </p>
+    <p class="label">Наличие спор:
+        <input id="yes" type="radio" name="fernSpores" value="yes" disabled>
+        <label for="yes">Есть</label>
+    </p>
+    <p><label for="color">Цвет:</label>
+        <input type="text" id="color" name="color" maxlength="30" placeholder="Цвет" pattern="^[А-Яа-яЁё\s]+$" disabled>
+    </p>
+    <p><input type="submit" class="button"name="send-info" value="Отправить" onclick="send()">
+        <input type="reset" class="button" id="delet" value="Сбросить"></p>
+      <script src="delete.js"></script></p>
+  </form>
+  <div id="tablePrint"> </div>
+</body>
+</html>
